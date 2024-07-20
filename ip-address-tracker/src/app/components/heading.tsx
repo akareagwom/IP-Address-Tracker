@@ -3,7 +3,7 @@
 export const Heading =()=>{
     return(
         <>
-        <div className="p-0 m-0 h-[40vh] flex flex-col items-center bg-[url('/images/pattern-bg-desktop.png')] ">
+        <div className="p-0 m-0 h-[40vh] flex flex-col items-center bg-[url('/images/pattern-bg-mobile.png')] lg:bg-[url('/images/pattern-bg-desktop.png')] ">
             <h1 className="text-white text-xl mt-4">IP Address Tracker</h1>
             <input
             className="
