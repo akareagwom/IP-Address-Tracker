@@ -25,8 +25,8 @@ export default function Home() {
     <div className="">              
       <Map/>
     </div>
+    <div className="overflow-none">
       <Address/>
-    <div className="">
     </div>
     </>
   );
