@@ -13,7 +13,7 @@ const Map = () => {
       const map = new mapboxgl.Map({
         container: mapContainerRef.current,
         style: 'mapbox://styles/mapbox/streets-v11',
-        center: [-74.5, 40],
+        center: [-75.5, 40],
         zoom: 9,
       });
 
@@ -22,7 +22,7 @@ const Map = () => {
   }, []);
 
   return (
-<div ref={mapContainerRef} className=""></div>
+<div id='map' ref={mapContainerRef} className=""></div>
   );
 };
 

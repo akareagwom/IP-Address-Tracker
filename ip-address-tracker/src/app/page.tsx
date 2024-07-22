@@ -16,18 +16,21 @@ export default function Home() {
       <Head>
         <title>map</title>
         <link rel="icon" href="/favicon.ico" />
-        {/* <link
+        <link
           rel="stylesheet"
           href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css"
-        /> */}
+        />
       </Head>
-    <Heading/>
-    <div className="">              
-      <Map/>
-    </div>
-    <div className="overflow-none">
-      <Address/>
-    </div>
+      <div className="">
+
+        <Heading/>
+        <div className="overflow-none">
+          <Address/>
+        </div>
+        <div className="">              
+          <Map/>
+        </div>
+      </div>
     </>
   );
 }
