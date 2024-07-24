@@ -20,7 +20,7 @@ export const Heading =()=>{
              name="" 
              placeholder="Search for any IP address or domain" 
              id="" />
-             <button className="text-white absolute rounded-l-none bg-black py-3.5 lg:py-1.5 right-[40px] lg:right-[356px] px-4 rounded-[8px] top-[60px]">
+             <button className="text-white absolute rounded-l-none bg-black py-3.5 lg:py-2.5 right-[40px] lg:right-[356px] px-4 rounded-[8px] top-[60px]">
              <IoIosArrowForward />
              </button>
         </div>
