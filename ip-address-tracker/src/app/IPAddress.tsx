@@ -7,10 +7,21 @@ interface Info {
     location : object;
 }
 
-export const fetchData =async()=>{
-    const response = await axios.get(getUrl);
-    // const data = response.data;
-    console.log(response)
+export const fetchData =async(): Promise <Info[]> =>{
+    try{
+        const response = await axios.get(getUrl);
+    const data: Info[]=[
+        {
+            ipAddress: response.data.ip,
+            location: response.data.location
+        }
+    ];
+    return data;
+    }catch (error)
+    {
+        console.error('Error fetching data:', error);
+        throw new Error('Failed to fetch data');
+    }
 
 
 }
