@@ -6,7 +6,7 @@ interface DataItem {
     location: object;
   }
 
-const Address=() =>{
+const Address=() => {
     const [data, setData] = useState<DataItem[]>([]);
     const [ipAddress, setIpAddress] = useState<string>("");
 
