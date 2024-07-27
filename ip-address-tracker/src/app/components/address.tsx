@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {fetchData} from '../IPAddress';
 
 interface DataItem {
@@ -10,11 +10,22 @@ const Address=() => {
     const [data, setData] = useState<DataItem[]>([]);
     const [ipAddress, setIpAddress] = useState<string>("");
 
-    const DataFunction =()=>{
-        setData(data);
-        setIpAddress(ipAddress);
-        fetchData();
-    }
+
+    useEffect(()=>{
+        const dataFunction =async()=>{
+            try {
+                const result = await fetchData();
+                setData(result);
+                // setIpAddress(ipAddress);
+            } catch (error) {
+                
+            }
+            
+        }
+        dataFunction();
+
+    },[])
+
 
     return(
         <div className=" lg:flex bg-white shadow-xl justify-between absolute top-[25%] lg:top-[28%] left-[10%] lg:left-[10%] rounded-[10px] p-12 w-[80%]">
