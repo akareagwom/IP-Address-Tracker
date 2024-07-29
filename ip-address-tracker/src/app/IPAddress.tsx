@@ -2,11 +2,13 @@ import axios from "axios";
 
 const getUrl = 'https://geo.ipify.org/api/v2/country?apiKey=at_xCF6qmBPCBmGpMJnzxcuH8c0943yj&ipAddress=8.8.8.8';
 
+
 interface Info {
     ipAddress: string;
     location : {
         timezone: string;
-        
+        country: string;
+        region: string;
     }
     isp: string;
 }
@@ -20,6 +22,8 @@ export const fetchData =async(): Promise <Info[]> =>{
             ipAddress: response.data.ip,
             location: {
                 timezone: response.data.location.timezone,
+                country: response.data.location.country,
+                region: response.data.location.region
             },
             isp: response.data.isp
         }
