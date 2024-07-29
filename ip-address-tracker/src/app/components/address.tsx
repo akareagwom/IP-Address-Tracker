@@ -3,8 +3,10 @@ import {fetchData} from '../IPAddress';
 
 interface DataItem {
     ipAddress: string;
-    location: object;
-    timezone: string;
+    location : {
+        timezone: string;
+        
+    }
     isp: string;
   }
 
@@ -41,16 +43,16 @@ const Address=() => {
 
                 <div className="border-[1px solid red]">
                     <h1 className="text-[8px]" >LOCATION</h1>
-                    <p>{JSON.stringify(item.location)}</p>
+                    {/* <p>{JSON.stringify(item.location)}</p> */}
                 </div>
 
                 <div className="border-[1px solid red]">
                     <h1 className="text-[8px]" >TIMEZONE</h1>
-                    <p>brrrrrrrrr</p>
+                    <p>{item.location.timezone}</p>
                 </div>
                 <div className="">
                     <h1 className="text-[8px]" >ISP</h1>
-                    <p>brrrrrrrrr</p>
+                    <p>{item.isp}</p>
                 </div>
 
             </div>

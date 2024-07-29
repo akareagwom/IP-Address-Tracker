@@ -4,8 +4,13 @@ const getUrl = 'https://geo.ipify.org/api/v2/country?apiKey=at_xCF6qmBPCBmGpMJnz
 
 interface Info {
     ipAddress: string;
-    location : object;
+    location : {
+        timezone: string;
+        
+    }
+    isp: string;
 }
+
 
 export const fetchData =async(): Promise <Info[]> =>{
     try{
@@ -13,7 +18,10 @@ export const fetchData =async(): Promise <Info[]> =>{
     const data: Info[]=[
         {
             ipAddress: response.data.ip,
-            location: response.data.location
+            location: {
+                timezone: response.data.location.timezone,
+            },
+            isp: response.data.isp
         }
     ];
     return data;
