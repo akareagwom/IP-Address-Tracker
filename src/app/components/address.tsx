@@ -7,6 +7,9 @@ interface DataItem {
         timezone: string;
         country: string;
         region: string;
+        postalCode: string;
+        lat: number;
+        lng: number;
     }
     isp: string;
   }
