@@ -1,5 +1,6 @@
 "use client"
 import { IoIosArrowForward } from "react-icons/io";
+import {fetchData} from '../IPAddress';
 
 export const Heading =()=>{
     return(
