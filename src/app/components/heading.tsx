@@ -1,8 +1,10 @@
 "use client"
 import { IoIosArrowForward } from "react-icons/io";
 import {fetchData} from '../IPAddress';
+import { useEffect, useState } from 'react';
 
 export const Heading =()=>{
+    const [ipAddress, setIpAddress] = useState<string>("");
     return(
         <>
         <div className="p-0 m-0 h-[40vh] flex flex-col items-center bg-[url('/images/pattern-bg-mobile.png')] lg:bg-[url('/images/pattern-bg-desktop.png')] ">

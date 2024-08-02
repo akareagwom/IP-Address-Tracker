@@ -16,7 +16,7 @@ interface DataItem {
 
 const Address=() => {
     const [data, setData] = useState<DataItem[]>([]);
-    const [ipAddress, setIpAddress] = useState<string>("");
+
 
 
     useEffect(()=>{
