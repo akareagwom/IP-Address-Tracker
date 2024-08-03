@@ -25,7 +25,7 @@ export const Heading =()=>{
                 w-[75%]
                 mt-4
                 text-[13px]
-                rounded-[8px]
+                rounded-[9px]
                 "
                 type="search"
                 value={ipAddress} 
