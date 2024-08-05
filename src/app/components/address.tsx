@@ -19,7 +19,7 @@ const Address=() => {
 
 
 
-    useEffect(()=>{
+    
         const dataFunction =async()=>{
             try {
                 const result = await fetchData();
@@ -31,8 +31,6 @@ const Address=() => {
             
         }
         dataFunction();
-
-    },[])
 
 
     return(
