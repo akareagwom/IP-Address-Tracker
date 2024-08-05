@@ -39,7 +39,7 @@ const Address=() => {
             {data.map((item=>
             <div key={item.ipAddress} className="lg:flex bg-white shadow-xl justify-between absolute top-[25%] lg:top-[28%] left-[10%] lg:left-[10%] rounded-[10px] p-12 w-[80%]">
                 <div  className="border-[1px solid red]">
-                    <h1 className="text-[8px]" >IP ADDRESS</h1>
+                    <h1 className="text-[8px]" >IP ADDRESS </h1>
                     <p>{item.ipAddress}</p>
                 </div>
 
