@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+
+const IPSTACK_ACCESS_KEY= '50564c1e41724a48b216a5d64a75b191'
 interface IpstackResponse {
   ip: string;
   type: string;
@@ -29,12 +31,11 @@ interface IpstackResponse {
   };
 }
 
-export const fetchIpData = async (ip: string): Promise<IpstackResponse | null> => {
-  const accessKey = process.env.IPSTACK_ACCESS_KEY; // Store your API key in environment variables
-  const url = `http://api.ipstack.com/${ip}?access_key=${accessKey}`;
-  
+export const fetchIpData = async (ipAddress: string): Promise<IpstackResponse | null> => {
+//   const accessKey = process.env.IPSTACK_ACCESS_KEY;
+  const url = `http://https://api.ipgeolocation.io/ipgeo?apiKey=${IPSTACK_ACCESS_KEY}${ipAddress}`;
   try {
-    const response = await axios.get<IpstackResponse>(url);
+      const response = await axios.get(url);
     return response.data;
   } catch (error) {
     console.error('Error fetching IP data:', error);

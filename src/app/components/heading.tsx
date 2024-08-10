@@ -2,21 +2,24 @@
 import { IoIosArrowForward } from "react-icons/io";
 import {fetchData} from '../IPAddress';
 import { useEffect, useState } from 'react';
+import ApiTest from "./apiTest";
+
+let ipData: any;
 
 export const Heading =()=>{
     const [ipAddress, setIpAddress] = useState<string>("");
 
 
-    const handleSubmit = (e:React.FormEvent)=>{
-        e.preventDefault();
-        fetchData();
-    }
+    // const handleSubmit = (e:React.FormEvent)=>{
+    //     e.preventDefault();
+    //     fetchData();
+    // }
 
     return(
         <>
         <div className="p-0 m-0 h-[40vh] flex flex-col items-center bg-no-repeat bg-cover bg-[url('/images/pattern-bg-mobile.png')] lg:bg-[url('/images/pattern-bg-desktop.png')] ">
             <h1 className="text-white text-xl mt-[20%] lg:mt-8">IP Address Tracker</h1>
-            <form onSubmit={handleSubmit} className="relative">
+            <form  className="relative">
                 <input
                 className="
                 lg:p-2
@@ -29,7 +32,7 @@ export const Heading =()=>{
                 "
                 type="search"
                 value={ipAddress} 
-                onChange={(e) => setIpAddress(e.target.value)}
+                // onChange={(e) => setIpAddress(e.target.value)}
                 name="" 
                 placeholder="Search for any IP address or domain" 
                 id="" />
@@ -37,6 +40,9 @@ export const Heading =()=>{
                 <IoIosArrowForward />
                 </button>
             </form>
+            <div className="">
+                {/* <ApiTest ipData={ipData} /> */}
+            </div>
         </div>
         </>
     )

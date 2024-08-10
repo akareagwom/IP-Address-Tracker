@@ -7,9 +7,14 @@ import { useMemo } from "react";
 import Head from 'next/head';
 import Map from "./components/map";
 import Address from "./components/address";
+import ApiTest from "./components/apiTest";
 // import { Mapper } from "./components/map";
 
+let ipData: any;
+
+
 export default function Home() {
+
 
   return (
     <>
@@ -26,6 +31,9 @@ export default function Home() {
         <Heading/>
         <div className="overflow-none">
           <Address/>
+        </div>
+        <div className="">
+          {/* <ApiTest ipData={ipData} /> */}
         </div>
         <div className="">              
           <Map/>

@@ -1,13 +1,14 @@
 import axios from "axios";
 
-const getUrl = 'https://geo.ipify.org/api/v2/country,city,vpn?apiKey=at_xCF6qmBPCBmGpMJnzxcuH8c0943yj&ipAddress ';
+const getUrl = 'https://api.ipstack.com/134.201.250.155?access_key=1efceeb335a4ccfd107b084ce061c2f3';
+const ipUrl = 'https://api.ipgeolocation.io/ipgeo?apiKey=50564c1e41724a48b216a5d64a75b191&ip=1.1.1.1'
 
 
 interface Info {
     ipAddress: string;
+    country_name: string;
     location : {
         timezone: string;
-        country: string;
         region: string;
         city: string;
         postalCode: string;
@@ -20,13 +21,13 @@ interface Info {
 
 export const fetchData =async(): Promise <Info[]> =>{
     try{
-        const response = await axios.get(getUrl);
+        const response = await axios.get(ipUrl);
     const data: Info[]=[
         {
             ipAddress: response.data.ip,
+            country_name: response.data.location.country_name,
             location: {
                 timezone: response.data.location.timezone,
-                country: response.data.location.country,
                 region: response.data.location.region,
                 city: response.data.location.city,
                 postalCode: response.data.location.postalCode,

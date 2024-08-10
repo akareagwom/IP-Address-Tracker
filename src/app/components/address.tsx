@@ -22,8 +22,8 @@ const Address=() => {
     
         const dataFunction =async()=>{
             try {
-                const result = await fetchData();
-                setData(result);
+                // const result = await fetchData();
+                // setData(result);
                 // setIpAddress(ipAddress);
             } catch (error) {
                 

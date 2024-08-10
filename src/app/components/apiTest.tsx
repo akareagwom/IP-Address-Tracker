@@ -9,16 +9,23 @@ interface HomeProps {
     return (
       <div>
         <h1>Your IP Information</h1>
-        {ipData ? (
+        {ipData ?(
+        <div className="">
+            <p>IP: {ipData.ip}</p>
+        </div>): (
+            <p>error</p>
+        )
+        }
+        {/* {ipData.map (
           <div>
             <p>IP: {ipData.ip}</p>
             <p>Country: {ipData.country_name}</p>
             <p>City: {ipData.city}</p>
-            {/* Add more fields as needed */}
+            
           </div>
         ) : (
           <p>Unable to fetch IP data.</p>
-        )}
+        )} */}
       </div>
     );
   };
@@ -27,7 +34,7 @@ interface HomeProps {
     // Get the client's IP address from the request headers
     const ip = 'check'; // Replace 'check' with a specific IP or 'check' to get the requester's IP
     
-    const ipData = await fetchIpData(ip);
+    const ipData = await fetchIpData('134.201.250.155');
     
     return {
       props: {
