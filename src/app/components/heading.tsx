@@ -36,7 +36,7 @@ export const Heading =()=>{
                 name="" 
                 placeholder="Search for any IP address or domain" 
                 id="" />
-                <button type="submit" className="text-white absolute rounded-l-none bg-black py-4 lg:py-2.5 right-[0px] lg:right-[0px] px-4 rounded-[8px] top-[15px]">
+                <button type="submit" className="text-white absolute rounded-l-none bg-black py-4 lg:py-[11px] right-[0px] lg:right-[0px] px-4 rounded-[8px] top-[15px]">
                 <IoIosArrowForward />
                 </button>
             </form>
