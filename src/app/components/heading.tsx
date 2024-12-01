@@ -41,7 +41,7 @@ export const Heading =()=>{
                 </button>
             </form>
             <div className="">
-                {/* <ApiTest ipData={ipData} /> */}
+                <ApiTest ipData={ipData} />
             </div>
         </div>
         </>
