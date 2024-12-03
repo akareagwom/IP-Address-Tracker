@@ -32,7 +32,7 @@ interface IpstackResponse {
 }
 
 export const fetchIpData = async (ipAddress: string): Promise<IpstackResponse | null> => {
-//   const accessKey = process.env.IPSTACK_ACCESS_KEY;
+  const accessKey = process.env.IPSTACK_ACCESS_KEY;
   const url = `http://https://api.ipgeolocation.io/ipgeo?apiKey=${IPSTACK_ACCESS_KEY}${ipAddress}`;
   try {
       const response = await axios.get(url);

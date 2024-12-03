@@ -3,6 +3,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import {fetchData} from '../IPAddress';
 import { useEffect, useState } from 'react';
 import ApiTest from "./apiTest";
+import Address from "./address";
 
 let ipData: any;
 
@@ -10,10 +11,10 @@ export const Heading =()=>{
     const [ipAddress, setIpAddress] = useState<string>("");
 
 
-    // const handleSubmit = (e:React.FormEvent)=>{
-    //     e.preventDefault();
-    //     fetchData();
-    // }
+    const handleSubmit = (e:React.FormEvent)=>{
+        e.preventDefault();
+        fetchData();
+    }
 
     return(
         <>
@@ -31,8 +32,8 @@ export const Heading =()=>{
                 rounded-[9px]
                 "
                 type="search"
-                value={ipAddress} 
-                // onChange={(e) => setIpAddress(e.target.value)}
+                // value={ipAddress} 
+                onChange={(e) => setIpAddress(e.target.value)}
                 name="" 
                 placeholder="Search for any IP address or domain" 
                 id="" />
@@ -40,8 +41,11 @@ export const Heading =()=>{
                 <IoIosArrowForward />
                 </button>
             </form>
-            <div className="">
+            {/* <div className="">
                 <ApiTest ipData={ipData} />
+            </div> */}
+            <div className="">
+                <Address ipAddress=""/>
             </div>
         </div>
         </>

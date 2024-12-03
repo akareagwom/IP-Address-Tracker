@@ -9,23 +9,24 @@ interface HomeProps {
     return (
       <div>
         <h1>Your IP Information</h1>
-        {ipData ?(
-        <div className="">
-            <p>IP: {ipData.ip}</p>
-        </div>): (
-            <p>error</p>
-        )
-        }
-        {/* {ipData.map (
-          <div>
+        {ipData ? (
+          <div className='bg-red-400'>
             <p>IP: {ipData.ip}</p>
             <p>Country: {ipData.country_name}</p>
             <p>City: {ipData.city}</p>
             
           </div>
         ) : (
-          <p>Unable to fetch IP data.</p>
-        )} */}
+          <p className='bg-white'>Unable to fetch IP data.</p>
+        )
+        }
+        {/* {ipData ?(
+          <div className="">
+          <p>IP: {ipData.ip}</p>
+        </div>): (
+            <p>error</p>
+        )
+        } */}
       </div>
     );
   };
