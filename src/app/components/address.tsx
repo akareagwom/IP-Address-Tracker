@@ -14,7 +14,7 @@ import {fetchData} from '../IPAddress';
 //     isp: string;
 //   }
 
-type IpstackResponse = /*unresolved*/ any
+type IpstackResponse =  any
 
 const Address : React.FC<{ ipAddress: string }>=({ ipAddress }) => {
     // const [data, setData] = useState<DataItem[]>([]);
