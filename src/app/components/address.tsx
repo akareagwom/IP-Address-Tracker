@@ -13,6 +13,7 @@ import {fetchData} from '../IPAddress';
 //     }
 //     isp: string;
 //   }
+//   interface Data {
 
 type IpstackResponse =  any
 
